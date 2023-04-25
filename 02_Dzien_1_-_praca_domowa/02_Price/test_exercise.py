@@ -35,7 +35,7 @@ class PriceTestCase(unittest.TestCase):
 
     def test_str_method(self):
         price_one = exercise.Price(10)
-        self.assertEqual(str(price_one), '10.0zł')
+        self.assertEqual(str(price_one), '10.0 PLN')
 
         price_two = exercise.Price(199.99)
-        self.assertEqual(str(price_two), '199.99zł')
+        self.assertEqual(str(price_two), '199.99 PLN')
