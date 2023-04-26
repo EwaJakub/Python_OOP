@@ -23,7 +23,11 @@ class Student:
 
 john = Student('John', 'Smith', '1A', 2012, 4.78)
 jane = Student('Jane', 'Adams', '2C', 2011, 5.11)
+print(john.name)
+print(jane.surname)
 
-aaa = Student.from_file("students.csv")
+all_students = Student.from_file("students.csv")
+print(all_students[1].name)
 
-print(aaa)
+a1_students = Student.from_file("students.csv", "1A")
+print(a1_students[0].name)
