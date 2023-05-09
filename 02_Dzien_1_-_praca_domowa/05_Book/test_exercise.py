@@ -59,10 +59,10 @@ class BookTestCase(unittest.TestCase):
         self.assertFalse(exercise.Book.check_isbn('9781481919538'))
 
     def test_check_isbn_returns_False_for_wrong_length_ISBNs(self):
-        self.assertTrue(exercise.Book.check_isbn('978139316093'))
-        self.assertTrue(exercise.Book.check_isbn('97813931609399'))
-        self.assertTrue(exercise.Book.check_isbn('978-1-593-2766-0'))
-        self.assertTrue(exercise.Book.check_isbn('978-1-593-27966-00'))
+        self.assertFalse(exercise.Book.check_isbn('978139316093'))
+        self.assertFalse(exercise.Book.check_isbn('97813931609399'))
+        self.assertFalse(exercise.Book.check_isbn('978-1-593-2766-0'))
+        self.assertFalse(exercise.Book.check_isbn('978-1-593-27966-00'))
 
     def test_class_Book_stores_arguments_as_attributes(self):
         book = exercise.Book('Test Title', 'Test Author', '978-1-393-16093-9')
